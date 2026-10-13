@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>AUREL — Ближе к сердцу</title>
+  <meta name="description" content="Восемь характеров. Одна особенная история — ваша. Откройте коллекцию кулонов AUREL и найдите свой личный символ.">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/fonts.css"><link rel="stylesheet" href="./style.css">
+  <link rel="preload" href="./assets/frames/0001.jpg" as="image">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#collection">Перейти к коллекции</a>
+<header class="header">
+  <nav class="nav-left" aria-label="Основная навигация"><a href="#collection">Коллекция</a><a href="#philosophy">Философия</a></nav>
+  <a class="wordmark" href="#top" aria-label="AUREL — в начало">AUREL<span>LES BIJOUX INTIMES</span></a>
+  <div class="nav-right"><button class="text-button choose" data-quiz>Найти свой кулон <span>↗</span></button><button class="saved-button" data-saved aria-label="Открыть избранное"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20.7 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1-1.1a5.5 5.5 0 0 0-7.7 7.8L12 21l8.7-8.5a5.5 5.5 0 0 0 0-7.8Z"/></svg><span id="saved-count">0</span></button></div>
+</header>
+<main>
+  <section class="film" id="top" aria-label="История AUREL: приближение к кулону при прокрутке">
+    <div class="film-sticky">
+      <canvas id="film-canvas" aria-label="Девушка в белом платье с кулоном в форме сердца"></canvas>
+      <div class="film-shade"></div>
+      <div class="hero-copy scene" data-scene="0"><p class="eyebrow">МАЛЕНЬКИЕ СИМВОЛЫ. БОЛЬШИЕ ЧУВСТВА.</p><h1>Ближе<br>к <em>сердцу.</em></h1><p class="intro">Есть украшения, которые становятся<br>частью вашей истории.</p><a class="underlink" href="#collection">Найти свою историю <span>↗</span></a></div>
+      <div class="detail-copy scene" data-scene="1"><p class="eyebrow">КРАСОТА В ЛИЧНОМ</p><h2>Не просто<br><em>украшение.</em></h2><p>Тихое признание. Тёплое воспоминание.<br>То, что хочется сохранить рядом.</p></div>
+      <div class="final-copy scene" data-scene="2"><p class="eyebrow">ВАШ ЛИЧНЫЙ СИМВОЛ</p><h2>Тот самый.<br><em>Только ваш.</em></h2><p>Подберём кулон вашей мечты —<br>созвучный тому, что вы чувствуете.</p><button class="underlink" data-quiz>Почувствовать свой <span>↗</span></button></div>
+      <div class="film-bottom"><span class="film-index">AUREL · ÉDITION 01</span><a class="scroll-cue" href="#collection"><span>ЛИСТАЙТЕ, ЧТОБЫ ПОЧУВСТВОВАТЬ</span><span class="scroll-line"></span></a><button id="motion-toggle" class="motion-button" aria-pressed="false">Анимация вкл. <span>◌</span></button></div>
+      <div class="film-progress"><i></i></div>
+    </div>
+  </section>
+  <section class="collection-intro" id="collection"><div class="reveal"><p class="eyebrow">КОЛЛЕКЦИЯ / 01</p><h2>У каждого чувства<br>есть своя <em>форма.</em></h2><p>Восемь характеров. Восемь способов сказать о главном.<br>Найдите тот, в котором узнаете себя.</p></div><span class="small-star" aria-hidden="true">✧</span><div class="collection-meta"><span>ВОСЕМЬ ЛИЧНЫХ ИСТОРИЙ</span><span>01 — 08</span></div></section>
+  <div id="products"></div>
+  <section class="philosophy" id="philosophy"><p class="eyebrow reveal">ФИЛОСОФИЯ AUREL</p><div class="ornament reveal" aria-hidden="true">a</div><h2 class="reveal">Самое ценное —<br>то, что <em>близко.</em></h2><p class="reveal">Мы верим в красоту, которой не нужны громкие слова.<br>В вещи, которые выбирают сердцем.<br>И в маленькие символы, способные рассказать большую историю.</p><button class="underlink reveal" data-quiz>Найдём ваш символ <span>↗</span></button></section>
+  <section class="closing"><div><p class="eyebrow">НАЧАЛО ВАШЕЙ ИСТОРИИ</p><h2>Какое чувство<br>вы хотите <em>сохранить?</em></h2></div><button class="circle-link" data-quiz aria-label="Подобрать кулон"><span>ПОДОБРАТЬ<br>КУЛОН</span><b>↗</b></button></section>
+</main>
+<footer><a class="footer-logo" href="#top">AUREL</a><p>Маленький символ. Ваша история.</p><div><a href="#collection">Коллекция</a><button class="text-button" data-saved>Избранное</button><a href="#top">Наверх ↑</a></div><span class="copyright">© AUREL 2026 · КОНЦЕПЦИЯ КОЛЛЕКЦИИ</span></footer>
+<dialog id="modal"><button class="close-modal" aria-label="Закрыть окно">×</button><div id="modal-content"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript><p class="noscript">Для анимации и подбора украшений включите JavaScript. <a href="./assets/film.mp4">Посмотреть фильм</a>.</p></noscript>
+</body></html>
